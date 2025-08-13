@@ -8,6 +8,7 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
 import database
+from keep_alive import keep_alive
 
 # --- SETUP ---
 load_dotenv()
@@ -206,4 +207,5 @@ async def upcoming(interaction: discord.Interaction):
 
 
 # --- RUN THE BOT ---
+keep_alive()
 bot.run(TOKEN)
